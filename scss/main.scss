@@ -1,5 +1,18 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
+
+@keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
 
 * {
     box-sizing: border-box;
@@ -18,9 +31,11 @@ body {
 //headings
 h1, h2, h3{
     margin: 0;
-    font-weight: 500;
+    font-weight: 800;
     &.lg-heading {
         font-size: 6rem;
+        animation-name: focus-in-expand;
+        animation-duration: 1s;
     }
     &.sm-heading {
         margin-bottom: 2rem;
@@ -65,3 +80,4 @@ main {
         }
     }
 }
+
