@@ -1,4 +1,4 @@
-$primary-color: #444;
+$primary-color: #333;
 $secondary-color: #48aef2;
 $background-opacity: 0.7;
 $show-home-image: true;
@@ -26,6 +26,15 @@ $home-image: url(../img/background.jpg);
                 background: rgba($primary-color, $background-opacity)
             }
         }   
+    }
+}
+
+// set text color depending on background color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }@else {
+        @return #fff;
     }
 }
 
